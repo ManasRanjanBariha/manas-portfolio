@@ -1,0 +1,35 @@
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: #1a1208;
+  border-bottom: 3px solid #d63a1a;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px;
+  height: 56px;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; letter-spacing: 3px;
+  color: #f5c400; text-decoration: none;
+}
+.nav-logo span { color: #d63a1a; }
+.nav-links { display: flex; gap: 0; list-style: none; }
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: #ccc; text-decoration: none;
+  padding: 0 20px; height: 56px;
+  display: flex; align-items: center;
+  border-left: 1px solid #333;
+  transition: #1a1208 0.15s, color 0.15s;
+}
+.nav-links a:hover { background: #d63a1a; color: #fff; }
+.nav-hire {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  background: #f5c400; color: #1a1208;
+  border: none; padding: 10px 20px;
+  font-weight: 500; cursor: pointer;
+  border-left: 3px solid #d63a1a;
+  transition: #1a1208 0.15s;
+}
+.nav-hire:hover { background: #d63a1a; color: #fff; }
