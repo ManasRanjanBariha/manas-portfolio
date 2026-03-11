@@ -1,0 +1,26 @@
+footer {
+  background: var(--ink);
+  border-top: var(--border);
+  padding: 0;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 32px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px; letter-spacing: 3px;
+  color: var(--yellow);
+}
+.footer-logo span { color: var(--red); }
+.footer-copy {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  color: #666; letter-spacing: 1px;
+}
+.footer-copy a { color: var(--yellow); text-decoration: none; }
+.footer-note {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  color: #444; letter-spacing: 1px; text-transform: uppercase;
+}

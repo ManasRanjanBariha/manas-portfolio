@@ -1,0 +1,65 @@
+#experience { border-bottom: var(--border); }
+
+.exp-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--border);
+}
+.exp-table thead tr {
+  background: var(--ink); color: var(--yellow);
+}
+.exp-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  padding: 14px 20px; text-align: left;
+  border-right: 2px solid #333;
+}
+.exp-table th:last-child { border-right: none; }
+
+.exp-row {
+  border-bottom: var(--border);
+  opacity: 0; transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.exp-row.visible { opacity: 1; transform: translateX(0); }
+.exp-row:nth-child(even) td { background: var(--paper); }
+.exp-row:last-child { border-bottom: none; }
+.exp-row:hover td { background: var(--yellow) !important; }
+
+.exp-row td {
+  padding: 20px;
+  border-right: var(--border);
+  vertical-align: top;
+  transition: background 0.15s;
+}
+.exp-row td:last-child { border-right: none; }
+
+.exp-period {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  color: var(--red); letter-spacing: 1px; white-space: nowrap;
+}
+.exp-company {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; letter-spacing: 1px;
+  line-height: 1;
+}
+.exp-role {
+  font-family: 'DM Mono', monospace; font-size: 12px;
+  font-weight: 500; margin-bottom: 8px;
+}
+.exp-desc {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  color: #555; line-height: 1.7;
+}
+.exp-type {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 2px; text-transform: uppercase;
+  display: inline-block; padding: 3px 8px;
+  background: var(--ink); color: var(--yellow);
+}
+.exp-techs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.exp-tech {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  padding: 2px 8px; border: 1px solid var(--ink);
+  background: transparent;
+}

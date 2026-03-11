@@ -1,0 +1,64 @@
+#skills { border-bottom: var(--border); background: var(--paper); }
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.skill-block {
+  border: var(--border);
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.skill-block:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--ink); }
+.skill-block:nth-child(2) { box-shadow: var(--shadow-red); }
+.skill-block:nth-child(2):hover { box-shadow: 9px 9px 0 var(--red); }
+.skill-block:nth-child(3) { box-shadow: var(--shadow-blue); }
+.skill-block:nth-child(3):hover { box-shadow: 9px 9px 0 var(--blue); }
+
+.skill-block-header {
+  padding: 14px 20px;
+  border-bottom: var(--border);
+  display: flex; align-items: center; gap: 12px;
+  background: var(--ink); color: var(--yellow);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px; letter-spacing: 2px;
+}
+.skill-block:nth-child(2) .skill-block-header { background: var(--red); color: #fff; }
+.skill-block:nth-child(3) .skill-block-header { background: var(--blue); color: #fff; }
+.skill-block:nth-child(4) .skill-block-header { background: var(--green); color: #fff; }
+
+.skill-block-body { padding: 20px; }
+.skill-row {
+  display: flex; flex-direction: column; gap: 5px;
+  margin-bottom: 14px;
+}
+.skill-row:last-child { margin-bottom: 0; }
+.skill-top { display: flex; justify-content: space-between; align-items: center; }
+.skill-name { font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; }
+.skill-pct { font-family: 'DM Mono', monospace; font-size: 11px; color: #888; }
+.skill-track {
+  height: 8px;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  position: relative; overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: var(--ink);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 1s cubic-bezier(0.16,1,0.3,1) 0.2s;
+}
+.skill-block:nth-child(2) .skill-fill { background: var(--red); }
+.skill-block:nth-child(3) .skill-fill { background: var(--blue); }
+.skill-block:nth-child(4) .skill-fill { background: var(--green); }
+.skill-fill.go { transform: scaleX(1); }
+
+.skill-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; padding-top: 16px; border-top: 2px dashed #ddd; }
+.chip {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px;
+  padding: 4px 10px; border: 2px solid var(--ink);
+  background: var(--bg);
+  text-transform: uppercase;
+}
